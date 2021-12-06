@@ -1,0 +1,26 @@
+#mainLabel {
+    -fx-font-family: Nunito ExtraBold;
+    -fx-text-fill: #fff;
+    -fx-font-size: 70px;
+    -fx-font-weight: bold;
+}
+
+#playButton {
+    -fx-padding: 20 70 20 70;
+    -fx-background-color: #695c78;
+    -fx-background-radius: 8;
+    -fx-text-fill: #fff;
+    -fx-font-family: sans-serif;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+#closeButton {
+    -fx-padding: 20 75 20 75;
+    -fx-background-color: #695c78;
+    -fx-background-radius: 8;
+    -fx-text-fill: #fff;
+    -fx-font-family: sans-serif;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
