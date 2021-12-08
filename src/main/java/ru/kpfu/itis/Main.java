@@ -6,8 +6,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.HPos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import ru.kpfu.itis.controller.MainSceneController;
 
@@ -22,20 +26,19 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader();
         Parent root = fxmlLoader.load(getClass().getResourceAsStream(FXML_FILE_NAME));
-        Scene scene = new Scene(root);
 
-        MainSceneController sceneController = fxmlLoader.getController();
-//        scene.setOnKeyPressed(sceneController.);
+//        MainSceneController sceneController = fxmlLoader.getController();
 
         primaryStage.setTitle("Memory Game");
-        primaryStage.setScene(scene);
         primaryStage.setWidth(1200);
         primaryStage.setHeight(800);
 
-//        GridPane.setHalignment(XNodeSet, HPos.CENTER);
         InputStream iconStream = getClass().getResourceAsStream("/images/icon.png");
         Image image = new Image(iconStream);
         primaryStage.getIcons().add(image);
+
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
 
         primaryStage.show();
     }

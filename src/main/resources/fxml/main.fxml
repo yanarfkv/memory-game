@@ -16,7 +16,7 @@
     <children>
         <ImageView fx:id="logoView" layoutY="70.0" layoutX="500.0" fitWidth="150.0" fitHeight="150.0"/>
         <Label fx:id="mainLabel" layoutX="340.0" layoutY="220.0" text="memory game"  stylesheets="/css/main.css"/>
-        <Button fx:id="playButton" layoutX="450.0" layoutY="500.0" text="ИГРАТЬ" stylesheets="/css/main.css"/>
+        <Button fx:id="playButton" layoutX="450.0" layoutY="500.0" mnemonicParsing="false" onAction="#playClicked" text="ИГРАТЬ" stylesheets="/css/main.css"/>
         <Button fx:id="closeButton" id="closeButton" layoutX="450.0" layoutY="600.0" cancelButton="true" onAction="#closeButtonAction" text="ВЫЙТИ" stylesheets="/css/main.css"/>
     </children>
 
