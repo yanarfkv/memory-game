@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCombination;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -28,28 +29,15 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader();
         Parent root = fxmlLoader.load(getClass().getResourceAsStream(FXML_FILE_NAME));
 
-        double width = 1280, height = 720;
-
-        File f = new File("config.properties");
-        if(f.exists()) {
-            InputStream input = new FileInputStream("config.properties");
-            properties.load(input);
-            width = Double.parseDouble(properties.getProperty("width"));
-            height = Double.parseDouble(properties.getProperty("height"));
-        }
-
-        Scene scene = new Scene(root, width, height);
+        Scene scene = new Scene(root);
 
         primaryStage.setWidth(1280);
         primaryStage.setHeight(720);
 
         primaryStage.setTitle("Memory Card Game");
-        primaryStage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.getIcons().add(new Image("/images/icon.png"));
-//        MainController mainController = fxmlLoader.getController();
-//        scene.setOnKeyPressed();
 
         primaryStage.show();
     }

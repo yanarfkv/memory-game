@@ -9,21 +9,15 @@
 <?import javafx.scene.image.ImageView?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ru.kpfu.itis.controller.MainSceneController"
+            fx:controller="ru.kpfu.itis.MainSceneController"
             prefHeight="400.0" prefWidth="600.0"
             style="-fx-background-color: #eacdc1">
 
-    <HBox>
-        <AnchorPane fx:id="gameArea">
-
-        </AnchorPane>
-    </HBox>
-
     <children>
-        <ImageView fx:id="logoView" layoutY="70.0" layoutX="500.0" fitWidth="150.0" fitHeight="150.0"/>
-        <Label fx:id="mainLabel" layoutX="340.0" layoutY="220.0" text="memory game"  stylesheets="/css/main.css"/>
-        <Button fx:id="playButton" layoutX="450.0" layoutY="500.0" mnemonicParsing="false" onAction="#playClicked" text="ИГРАТЬ" stylesheets="/css/main.css"/>
-        <Button fx:id="closeButton" id="closeButton" layoutX="450.0" layoutY="600.0" cancelButton="true" onAction="#closeButtonAction" text="ВЫЙТИ" stylesheets="/css/main.css"/>
+        <ImageView fx:id="logoView" layoutY="70.0" layoutX="550.0" fitWidth="150.0" fitHeight="150.0"/>
+        <Label fx:id="mainLabel" layoutX="390.0" layoutY="220.0" text="memory game"  stylesheets="/css/main.css"/>
+        <Button fx:id="playButton" layoutX="500.0" layoutY="400.0" mnemonicParsing="false" onAction="#playClicked" text="ИГРАТЬ" stylesheets="/css/main.css"/>
+        <Button fx:id="closeButton" id="closeButton" layoutX="500.0" layoutY="500.0" cancelButton="true" onAction="#closeButtonAction" text="ВЫЙТИ" stylesheets="/css/main.css"/>
     </children>
 
 </AnchorPane>

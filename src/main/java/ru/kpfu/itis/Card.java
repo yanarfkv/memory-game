@@ -4,12 +4,23 @@ import javafx.scene.image.Image;
 
 public class Card {
     private Image value;
-    private Image background;
     private int id;
+    private Image background;
 
-    public Card(Image value, Image background, int id){
+    public void setValue(Image value) {
         this.value = value;
+    }
+
+    public Image getBackground() {
+        return background;
+    }
+
+    public void setBackground(Image background) {
         this.background = background;
+    }
+
+    public Card(Image value, int id){
+        this.value = value;
         this.id = id;
     }
 
@@ -19,10 +30,6 @@ public class Card {
 
     public Image getValue() {
         return value;
-    }
-
-    public Image getBackground() {
-        return background;
     }
 
     public int getId() {

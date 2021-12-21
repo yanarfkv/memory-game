@@ -1,4 +1,4 @@
-package ru.kpfu.itis.controller;
+package ru.kpfu.itis;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.FileInputStream;
@@ -26,14 +27,15 @@ public class MainSceneController implements Initializable {
 
     @FXML
     public Button closeButton;
-
     @FXML
     public Button playButton;
-
     @FXML
     public ImageView logoView;
+    @FXML
+    private AnchorPane mainMenu;
+    @FXML
+    private ImageView cards;
 
-//    public void
 
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -42,8 +44,9 @@ public class MainSceneController implements Initializable {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+//        cards.setFitHeight(531);
+//        cards.setFitHeight(205);
     }
-
 
     @FXML
     public void closeButtonAction(ActionEvent event) {
@@ -58,4 +61,5 @@ public class MainSceneController implements Initializable {
         Stage stage = (Stage) playButton.getScene().getWindow();
         stage.getScene().setRoot(root);
     }
+
 }
