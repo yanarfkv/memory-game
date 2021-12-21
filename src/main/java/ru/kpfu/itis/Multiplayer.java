@@ -183,6 +183,22 @@ public class Multiplayer implements Initializable {
     }
 
     @FXML
+    private void multiplayerClicked() throws IOException{
+//        theme = new Image("images/cards/card-03.png");
+
+
+        FXMLLoader Loader = new FXMLLoader();
+        Loader.setLocation(getClass().getClassLoader().getResource("fxml/play.fxml"));
+        Loader.load();
+        Multiplayer multi = Loader.getController();
+//        Stage stage = (Stage) getScene().getWindow();
+//        multi.setMode(mode,theme);
+//        multi.fixLang();
+//        multi.multiplayerStart();
+//        stage.getScene().setRoot(Loader.getRoot());
+    }
+
+    @FXML
     private void nextClicked() {
 
     }
